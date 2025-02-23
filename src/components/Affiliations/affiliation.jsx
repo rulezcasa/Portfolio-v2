@@ -1,5 +1,4 @@
 import React from 'react';
-import { FiSearch } from 'react-icons/fi';
 import vit from '../../images/vit.png';
 import csir from '../../images/csir.jpeg';
 import pretoria from '../../images/up.jpeg';

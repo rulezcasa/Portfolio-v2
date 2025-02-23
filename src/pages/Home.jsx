@@ -1,9 +1,5 @@
-import { Link } from 'react-router-dom';
 import AppBanner from '../components/shared/AppBanner';
 import AffiliationGrid from '../components/Affiliations/affiliation';
-import ProjectsGrid from '../components/projects/ProjectsGrid';
-import { ProjectsProvider } from '../context/ProjectsContext';
-import Button from '../components/reusable/Button';
 import EndorsementGrid from '../components/endorsements/endorsement';
 import AboutMeCustom from '../components/about/aboutcustom';
 
