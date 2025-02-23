@@ -1,7 +1,19 @@
 import { FiArrowDownCircle } from "react-icons/fi";
 import { motion } from "framer-motion";
+import useThemeSwitcher from '../../hooks/useThemeSwitcher';
+import React, { useEffect } from 'react';
+
+
 
 const AppBanner = () => {
+  
+  const [activeTheme, setTheme] = useThemeSwitcher();
+  console.log(activeTheme);
+
+  useEffect(() => {
+    setTheme('dark');
+  }, [setTheme]);
+  
   return (
     <motion.section
       initial={{ opacity: 0 }}
