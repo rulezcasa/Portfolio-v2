@@ -6,9 +6,8 @@ const ContactForm = () => {
 		<div className="w-full lg:w-1/2">
 			<div className="leading-loose">
 				<form
-					onSubmit={(e) => {
-						e.preventDefault();
-					}}
+					action="https://staging.formspree.io/f/alrzgbqk"  // Replace with your actual Formspree form ID URL
+					method="POST"
 					className="max-w-xl m-4 p-6 sm:p-10 bg-secondary-light dark:bg-secondary-dark rounded-xl shadow-xl text-left"
 				>
 					<p className="font-general-medium text-primary-dark dark:text-primary-light text-2xl mb-8">
