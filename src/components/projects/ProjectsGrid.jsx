@@ -136,7 +136,7 @@ const dummyProjects = [
 		url:'https://github.com/rulezcasa/Gesture-based-home-automation',
 		area : 'IoT, Computer Vision'
 	},
-	// Add more dummy projects as needed
+	// Add more dummy projects as needed okay
 ];
 
 const ProjectsGrid = () => {
