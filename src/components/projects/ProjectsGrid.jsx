@@ -21,7 +21,7 @@ const dummyProjects = [
 		title: 'AT-DQN : Attention Based Exploration in Deep RL',
 		category: 'Research @ CSIR 4PI',
 		image: dqn,
-		url:'',
+		url:'https://github.com/rulezcasa/AT-DQN',
 		area : 'Deep RL'
 	},
 	{
@@ -140,28 +140,41 @@ const dummyProjects = [
 ];
 
 const ProjectsGrid = () => {
-	return (
-		<section className="py-5 sm:py-10 mt-5 sm:mt-10">
-			<div className="text-center">
-				<p className="font-general-medium text-2xl sm:text-4xl mb-1 text-ternary-dark dark:text-ternary-light">
-					Projects and Publications
-				</p>
-			</div>
-			<br />
-			<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-6 sm:gap-10">
-				{dummyProjects.map((project) => (
-					<ProjectSingle
-						title={project.title}
-						category={project.category}
-						image={project.image}
-						externalLink={project.url}
-						area={project.area}
+  const handleClick = (url) => {
+    if (url) {
+      alert("Proprietary code");
+      // No navigation or any other action after alert
+    }
+  };
 
-					/>
-				))}
-			</div>
-		</section>
-	);
+  return (
+    <section className="py-5 sm:py-10 mt-5 sm:mt-10">
+      <div className="text-center">
+        <p className="font-general-medium text-2xl sm:text-4xl mb-1 text-ternary-dark dark:text-ternary-light">
+          Projects and Publications
+        </p>
+      </div>
+      <br />
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-6 sm:gap-10">
+        {dummyProjects.map((project) => (
+          <div
+            key={project.id}
+            onClick={() => handleClick(project.url)}
+            style={{ cursor: project.url ? "pointer" : "default" }}
+          >
+            <ProjectSingle
+              title={project.title}
+              category={project.category}
+              image={project.image}
+              externalLink={project.url}
+              area={project.area}
+            />
+          </div>
+        ))}
+      </div>
+    </section>
+  );
 };
+
 
 export default ProjectsGrid;
