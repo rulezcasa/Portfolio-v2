@@ -9,12 +9,12 @@ const socialLinks = [
 	{
 		id: 1,
 		icon: <FiLinkedin />,
-		url: 'https://www.stoman.me/',
+		url: 'https://www.linkedin.com/in/rulezcasa/
 	},
 	{
 		id: 2,
 		icon: <FiGithub />,
-		url: 'https://github.com/realstoman',
+		url: 'https://github.com/rulezcasa',
 	},
 	{	
 		id: 3,
