@@ -9,7 +9,7 @@ const socialLinks = [
 	{
 		id: 1,
 		icon: <FiLinkedin />,
-		url: 'https://www.linkedin.com/in/rulezcasa/
+		url: 'https://www.linkedin.com/in/rulezcasa',
 	},
 	{
 		id: 2,
