@@ -141,7 +141,7 @@ const dummyProjects = [
 
 const ProjectsGrid = () => {
   const handleClick = (e, url) => {
-    if (url=='') {
+    if (url==='') {
       e.preventDefault();
       alert("Proprietary code");
     }
