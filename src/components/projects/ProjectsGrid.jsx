@@ -140,10 +140,10 @@ const dummyProjects = [
 ];
 
 const ProjectsGrid = () => {
-  const handleClick = (url) => {
-    if (url) {
+  const handleClick = (e, url) => {
+    if (!url) {
+      e.preventDefault();
       alert("Proprietary code");
-      // No navigation or any other action after alert
     }
   };
 
@@ -157,17 +157,14 @@ const ProjectsGrid = () => {
       <br />
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-6 sm:gap-10">
         {dummyProjects.map((project) => (
-          <div
-            key={project.id}
-            onClick={() => handleClick(project.url)}
-            style={{ cursor: project.url ? "pointer" : "default" }}
-          >
+          <div key={project.id} style={{ cursor: project.url ? "pointer" : "default" }}>
             <ProjectSingle
               title={project.title}
               category={project.category}
               image={project.image}
               externalLink={project.url}
               area={project.area}
+              onClick={(e) => handleClick(e, project.url)}
             />
           </div>
         ))}
